@@ -1,3 +1,12 @@
+use peg::board::BoardBuilder;
+use ui::draw_board;
+
+pub mod peg;
+pub mod ui;
+
 fn main() {
-    println!("Hello, world!");
+    let board = BoardBuilder::new(5, 5)
+        .build();
+
+    draw_board(&board);
 }
